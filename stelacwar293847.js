@@ -1,12 +1,16 @@
 function openVideo(url) {
+
     if (!url.includes("embed")) {
         const videoId = url.split("v=")[1].split("&")[0];
         url = `https://www.youtube.com/embed/${videoId}`;
     }
 
+    console.log("Embed URL:", url);  // Log URL setelah diubah
+
     document.getElementById('videoPopup').style.display = 'flex';
     document.getElementById('videoIframe').src = url;
 }
+
 
 let currentQuoteIndex = 0;
 

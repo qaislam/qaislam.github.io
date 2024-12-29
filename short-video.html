@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAIslam.github.io -- Menjawab Tuduhan Islam</title>
+    <link rel="icon" href="jesuscrucified.jpeg">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+            color: #333;
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to bottom, #121212, #1e1e1e);
+            color: white;
+        }
+        body.dark-mode .video-gallery .video-item {
+            background-color: black;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: fixed;
+            top: 10px;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .donate-button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #007BFF, #0056b3);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: not-allowed;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-button:hover {
+            background: linear-gradient(to right, #0056b3, #003d80);
+        }
+
+        main {
+            margin-top: 140px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .video-item {
+            width: calc(33.333% - 1rem);
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-item iframe, .video-item .tiktok-embed {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+
+        .mode-canvas-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        canvas {
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .profile {
+                margin: 0 auto;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            .donate-button {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .video-item {
+                width: 100%;
+            }
+            .video-gallery {
+                margin-top: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="jesuscrucified.jpeg" alt="Profile">
+        </div>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="article.html">Artikel</a>
+            <a href="video.html">Video</a>
+            <a href="short-video.html">Short</a>
+        </nav>
+        <div class="donate-button">
+            <span>No Click</span>
+        </div>
+        <div class="mode-canvas-container" id="modeContainer">
+            <canvas id="modeCanvas" width="50" height="50"></canvas>
+        </div>
+    </div>
+
+    <main>
+        <div class="video-gallery">
+            <!-- Video Items -->
+            <div class="video-item">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@akunrealedistv/video/7435487301901356308" data-video-id="7435487301901356308">
+                    <section>
+                        <a target="_blank" title="@akunrealedistv" href="https://www.tiktok.com/@akunrealedistv?refer=embed">@akunrealedistv</a>
+                        <p>berhentilah mentuhankan mayat</p>
+                        <a target="_blank" title="♬ suara asli  - edisTV" href="https://www.tiktok.com/music/suara-asli-edisTV-7435487459993586449?refer=embed">♬ suara asli  - edisTV</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div class="video-item">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@akunrealedistv/video/7379144984131341573" data-video-id="7379144984131341573" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@akunrealedistv" href="https://www.tiktok.com/@akunrealedistv?refer=embed">@akunrealedistv</a> <p>siapakah yg maha dahsyat tipu nya? </p> <a target="_blank" title="♬ original sound  - edisTV" href="https://www.tiktok.com/music/original-sound-edisTV-7379145005771082501?refer=embed">♬ original sound  - edisTV</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                    <section>
+                        <a target="_blank" title="@akunrealedistv" href="https://www.tiktok.com/@akunrealedistv?refer=embed">@akunrealedistv</a>
+                        <p>berhentilah mentuhankan mayat</p>
+                        <a target="_blank" title="♬ suara asli  - edisTV" href="https://www.tiktok.com/music/suara-asli-edisTV-7435487459993586449?refer=embed">♬ suara asli  - edisTV</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div class="video-item">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@akunrealedistv/video/7399909181131640069" data-video-id="7399909181131640069" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@akunrealedistv" href="https://www.tiktok.com/@akunrealedistv?refer=embed">@akunrealedistv</a> <a title="zumavsedistv" target="_blank" href="https://www.tiktok.com/tag/zumavsedistv?refer=embed">#zumavsedistv</a> <a target="_blank" title="♬ original sound  - edisTV" href="https://www.tiktok.com/music/original-sound-edisTV-7399909168631139078?refer=embed">♬ original sound  - edisTV</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                    <section>
+                        <a target="_blank" title="@akunrealedistv" href="https://www.tiktok.com/@akunrealedistv?refer=embed">@akunrealedistv</a>
+                        <p>berhentilah mentuhankan mayat</p>
+                        <a target="_blank" title="♬ suara asli  - edisTV" href="https://www.tiktok.com/music/suara-asli-edisTV-7435487459993586449?refer=embed">♬ suara asli  - edisTV</a>
+                    </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const canvas = document.getElementById('modeCanvas');
+        const modeContainer = document.getElementById('modeContainer');
+        const ctx = canvas.getContext('2d');
+        let isDarkMode = false;
+
+        function drawSun() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(25, 25, 20, 0, Math.PI * 2);
+            ctx.fillStyle = 'yellow';
+            ctx.fill();
+        }
+
+        function drawMoon() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(25, 25, 20, 0, Math.PI * 2);
+            ctx.fillStyle = 'lightgray';
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(35, 15, 20, 0, Math.PI * 2);
+            ctx.fillStyle = '#121212';
+            ctx.fill();
+        }
+
+        function toggleMode() {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                drawMoon();
+            } else {
+                document.body.classList.remove('dark-mode');
+                drawSun();
+            }
+        }
+
+        drawSun();
+        modeContainer.addEventListener('click', toggleMode);
+    </script>
+</body>
+</html>
