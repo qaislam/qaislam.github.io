@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a56);
+    color: #d4d4dc;
+}
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #2c2c3e, #48486e);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #2e2e42;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    color: #d4d4dc;
+}
+article h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+article p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+.content-lainnya {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.konten-card {
+    flex: 0 0 auto;
+    width: 250px;
+    background: linear-gradient(135deg, #1c1c2e, #38385b);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.konten-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.konten-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+.konten-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+.konten-card p {
+    font-size: 0.9rem;
+    color: #d4d4dc;
+}
+.back-button {
+    display: block;
+    max-width: 200px;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #3a3a56, #48486e);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.3s;
+}
+.back-button:hover {
+    background: linear-gradient(135deg, #48486e, #5c5c84);
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    article {
+        padding: 1rem;
+    }
+    .konten-card {
+        width: 200px;
+    }
+}

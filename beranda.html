@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAIslam.github.io -- Menjawab Tuduhan Islam</title>
+    <link rel="icon" href="jesuscrucified.jpeg">
+    <link rel="stylesheet" href="article202412262025.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="jesuscrucified.jpeg" alt="Profile">
+        </div>
+        <nav>
+            <a href="beranda.html">Beranda</a>
+            <a href="article.html">Artikel</a>
+            <a href="video.html">Video</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+        <a href="donate.html"><button class="donate-button">Donasi</a></button>
+    </div>
+    <main>
+        <section class="video-section">
+            <h2>Video-video Kami <span class="see-more"><a href="#">Selengkapnya</a></span></h2>
+            <div class="video-list">
+                <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/ZO7uQX6zuYI?si=81kHGJ-9ZPL1gbsL')">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZO7uQX6zuYI?si=81kHGJ-9ZPL1gbsL"
+                     title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="content">
+                        <h3>Muslim: Baginda adalah Tuhan kami</h3>
+                        <p>Mari kita menyimak serta menonton pengakuan umat muslim yang menyembah mayat serta menuhankannya, yang berbeda dari kita adalah Allah yang hidup.</p>
+                        <a href="#" class="watch-button">Nonton</a>
+                    </div>
+                </div>
+                <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/yxZRqtw5uMc?si=nRqq-6apefAnpcX-')">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yxZRqtw5uMc?si=nRqq-6apefAnpcX-" title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+                    <div class="content">
+                        <h3>Seorang Ustadz terpatahkan?</h3>
+                        <p>Mari kita menyimak serta menonton agama masuk akal IQ 78 dibantahkan oleh seorang Jenius Edis dan menjadi terpaku dan omong kasar. Apakah ini gambaran Islam?</p>
+                        <a href="#" class="watch-button">Nonton</a>
+                    </div>
+                </div>
+                <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/t1rxfh4wVC0?si=Z0kafLKxLQDe_p3b')">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t1rxfh4wVC0?si=Z0kafLKxLQDe_p3b" title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+                    <div class="content">
+                        <h3>Muhammad takut Allah SWT atau Manusia?</h3>
+                        <p>Mari kita menyimak serta menonton agama masuk akal IQ 78 menjawab bagaimana memiliki seorang nabi pagan yang takut dengan manusia</p>
+                        <a href="#" class="watch-button">Nonton</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2>Artikel-artikel Kami <span class="see-more"><a href="article-post.html">Selengkapnya</a></span></h2>
+            <div class="article-list">
+                <div class="article-item">
+                    <img src="fact-banner12020.jpg" alt="Artikel 1" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                    <div class="content">
+                        <h3>Muhammad bohong & ngarep?</h3>
+                        <p>Apakah Muhammad seorang pembohong dan suka ngarep? mari kita baca. Semoga dengan membaca, pemikiran anda terbuka.</p>
+                        <a href="artikelread1.html" class="read-button">Bacalah</a>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <img src="fact-banner22020.jpg" alt="Artikel 2" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                    <div class="content">
+                        <h3>Muhammad pernah sembah batu?</h3>
+                        <p>Deskripsi singkat artikel 2 yang menarik untuk dibaca lebih lanjut.</p>
+                        <a href="artikelread2.html" class="read-button">Bacalah</a>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <img src="fact-banner32020.jpg" alt="Artikel 3" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                    <div class="content">
+                        <h3>Minuman sehat bagi muslim: Mencengangkan!</h3>
+                        <p>Semoga mengerti.</p>
+                        <a href="artikelread3.html" class="read-button">Bacalah</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-up Video -->
+    <div id="videoPopup" class="video-popup">
+        <button class="close-btn" onclick="closeVideo()">×</button>
+        <iframe id="videoIframe" src="" allowfullscreen></iframe>
+    </div> 
+
+    <section class="quotes-section">
+        <h2>Quotes Kristen</h2>
+        <div class="quotes-container">
+            <button class="scroll-button left" onclick="scrollQuotes(-1)">&#10094;</button>
+            <div class="quotes-list">
+                <div class="quote-item">
+                    <p>Waspadalah terhadap nabi-nabi palsu yang datang kepadamu dengan menyamar seperti domba, tetapi di baliknya ada serigala yang buas. (Matius 7:15)</p>
+                </div>
+                <div class="quote-item">
+                    <p>Percayalah kepada TUHAN dengan segenap hatimu, dan janganlah bersandar kepada pengertianmu sendiri. Akuilah Dia dalam segala lakumu, maka Ia akan meluruskan jalanmu. (Amsal 3:5-6)</p>
+                </div>
+                <div class="quote-item">
+                    <p>Diberkatilah orang yang mengandalkan TUHAN, yang menaruh harapannya pada TUHAN! (Yeremia 17:7)</p>
+                </div>
+            </div>
+            <button class="scroll-button right" onclick="scrollQuotes(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    
+
+    <script src="stelacwar293847.js"></script>
+</body>
+</html>
